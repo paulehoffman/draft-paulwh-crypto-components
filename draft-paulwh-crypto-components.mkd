@@ -1,0 +1,170 @@
+---
+title: Referencing Cryptographic Components in IETF Documents
+abbrev: Crypto components
+docname: draft-paulwh-crypto-components-00
+ipr: trust200902
+submissiontype: IETF
+cat: info
+
+author:
+  -
+    ins: P. Wouters
+    name: Paul Wouters
+    organization: Aiven
+    email: paul.wouters@aiven.io
+  -
+    ins: P. Hoffman
+    name: Paul Hoffman
+    organization: ICANN
+    email: paul.hoffman@icann.org
+
+informative:
+  RFC9371:
+
+normative:
+  RFC8126:
+
+--- abstract
+
+This document describes the history of how cryptographic components have been specified and referenced in the IETF, particularly in RFCs.
+It also gives guidance for how such specification should happen in the future.
+
+--- middle
+
+# Introduction
+
+The IETF has many diverse ways to document and reference cryptographic components that are used in protocols. 
+These practices have changed over time, based on the IETF leadership and the types of components needed by protocols.
+
+The purpose of this document is to increase consistency and transparency in how the IETF handles cryptographic components.
+This document does not define any new policies, but instead describes the many practices that have been used, particularly the practices that are considered best for use today.
+
+In this document, items such as cryptographic algorithms, base primitives, functions, methods, and constructions are all lumped under the term "cryptographic components".
+Doing so avoids the conflicting definitions of what differentiates, for example, a method from a construction.
+
+This document explicitly does not prohibit exceptions from the current practices.
+Give the wide variety of historical practices, the difficulty of differentiating what is a base primitive and what is a cryptographic component, and the variety of needs in IETF working groups, leeway is allowed for future specifications.
+
+# Referencing Cryptography in RFCs
+
+RFCs that define secure protocols need to reference cryptographic components, unless those RFC define the components themselves.
+It is uncommon for IETF protocols to define cryptographic components; instead, those components are define elsewhere and referenced in the protocol RFC.
+
+There are many sources for cryptographic references for RFCs.
+
+## RFCs for Specifying Cryptography
+
+In order to be published as an RFC, an Internet Draft must be sponsored by one of the following:
+
+- An IETF working group (and then the working group's Area Director)
+- A research group in the Internet Research Task Force (IRTF)
+- An Area Director who is individually sponsoring the draft
+- The Independent Submissions Editor (ISE)
+- The Internet Architecture Board
+
+RFCs describing cryptographic components have been published by the first four of those.
+Note, however, that Area Directors may not be willing to individually sponsor drafts for cryptographic components because other venues for RFC publication can garner better reviews, and because RFCs are not required for specifying cryptographic components (see {{external}}).
+
+Many RFCs are specifications of cryptographic components, some are specific use cases of cryptography where additional operational constrains apply, and still others simply list cryptographic identifiers such as OIDs or IANA registration values.
+
+Whenever possible, cryptographic components related to a specific protocol should be specified separately from the protocol itself.
+This allows better review of the cryptography by cryptographers, and better review of the protocol by protocol experts.
+
+## External References for Specifying Cryptography {#external}
+
+There are many sources of references for cryptography other than RFCs.
+Such sources include: 
+
+- National standards development organizations (SDOs) such as the U.S. National Institute of Standards and Technology (NIST)
+- International SDOs such as the International Standards Organization (ISO) and the International Telecommunications Union (ITU)
+- Academic papers and articles
+- Internet Drafts that did not become RFCs
+- Web sites of individual cryptographers
+
+The latter two of these are controversial in the IETF.
+The original intention for Internet Drafts were that they would always be short-lived and thus should not be considered good long-term references.
+However, due to various pressures on the RFC system, there are some drafts that never became RFCs but whose last published version still represents a stable description of a cryptographic component.
+Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
+
+# Using Identifiers for Cryptography in Protocols
+
+Although a proliferation of cryptographic components is unwanted, the IETF encourages experimenting with new cryptographic components.
+Identifiers used in IETF protocols are meant to be easy to obtain, as the IETF encourages experimentation and getting operational experiences.
+These identifiers are often called "code points" when they are listed in IANA registries, but might also be object identifiers (OIDs).
+OIDs are covered in {{oids}}.
+
+IANA registries are described in depth in {{RFC8126}}.
+The following sections cover aspects of using IANA registries for cryptographic protocols; most of these aspects are the same for non-cryptographic protocols as well.
+
+## Per-Registry Requirements for Adding Code Points
+
+In the past, some working groups had the IANA registries for their protocols be very strict with allowing new code point allocations for cryptographic components.
+Recently, the rules for many registries have been updated to make it easier to get code points in order to allow for experimentation before RFCs are published.
+Where possible, the rules for registries for cryptographic components should have an open registration policy (such as "Expert Review" or "Specification Required") that can be used by Internet Drafts, not just for RFCs.
+
+There are some IANA registries where the limited allocation space does not allow for handing out many experimental code points, such as those where the number of code points is limited to 256 or fewer.
+This necessitates a more conservative approach to code point allocation, and might instead force experiments to use private use code points instead of having allocations for code points that might only be thinly used.
+
+As stated above, Internet Drafts that did not become RFCs are a method for defining cryptographic components.
+This method is controversial with some members of the IETF community because drafts were originally designed to be impossible to access six months after publication, and wording based on the assumption of that inaccessibility still appears automatically in current Internet Drafts.
+However, using drafts as stable references for code points in IANA registries has been allowed for at least 20 years.
+When a draft If used as a reference for a code point, it needs to be a specific version of a draft; that is, the filename of the draft must end in a two-digit number.
+
+## Private-Use Code Points
+
+Every IANA registry for cryptographic components should reserve some code points for "private use".
+These private-use code points can be used by protocol implementers to indicate components that do not have their own code points.
+Generally, the RFC describing the protocol will define how the private-use code points can be used in practice.
+
+## Vendor Space Code Points
+
+Some IANA registries use a an allocation scheme that allows for unlimited code points based on "vendor strings".
+This allows for wide experimentation in a "vendor space" that acts as a private-use registration.
+Such registrations might later be converted to an allocation not based on vendor names if the cryptographic component achieves IETF-wide consensus.
+
+## Recommendations in IANA Registries
+
+Some IANA registries for specific cryptographic protocols have a column with a name such as "status" or "recommended" that indicates whether the the IETF recommends that a cryptographic component be used in that protocol.
+The definition of the column should differentiate between recommending for implementation and recommending for deployment.
+
+- Recommendations for implementation tell developers of the protocol whether they should or must include the cryptographic component in their software or hardware implementations.
+Such recommendations make the component available to users, letting them choose whether or not to use the component in their deployments.
+- Recommendations for implementation tell the users of the protocol whether they should or must use the component in their deployments.
+
+In the former case, the IETF is only speaking to developers; in the latter, the IETF is speaking directly to users who configure their use of the protocol.
+This difference between "implementation" and "deployment" has sometimes tripped up working groups, but it is quite important to people trying to understand the IANA registry contents.
+
+Decisions on setting the values in these columns require a standards track RFC.
+That is, Independent Stream and IRTF RFCs cannot set or change the values in such a table in an IANA registry.
+
+A working group's decision about whether a particular cryptographic component is mandatory, suggested, suggested against, or must not be used, may not an easy one to make, particularly in light of also having to also decide for both implementation and deployment.
+Deployed cryptographic components that known to be weak, such as those with keys that are now considered to be too small, present a significant challenge for working groups.
+For such a weak component, clearly the recommendation should be against deployment, but a similar recommend against allowing implementation can make deployed systems unusable.
+Such decisions are left to working groups, an are not covered here in any significant depth.
+
+Having too many algorithms with a "recommended" status can be harmful because it complicates implementations, deployments, and migrations to newer algorithms.
+
+Registries that do not have columns for "implementation" and/or "deployment" can be updated by working groups or the IETF to add those columns.
+
+# OIDs {#oids}
+
+Some IETF cryptographic protocols, notable S/MIME, use OIDs instead of IANA registries for code points.
+OIDs are a hierarchical numbering system, normally stored in ASN.1 DER or BER encoding, and displayed as a series of positive integers separated by period (".") characters.
+When designing new protocols, IANA registries with code points should be used instead of OIDs.
+
+In IETF standards, many OIDs for cryptographic components normally are based on a part of the OID tree that was established in the early 1990s.
+However, many OIDs come from other parts of the OID tree, and no particular part of the OID tree is better or worse than any other for unique identification of cryptographic components.
+In fact, individuals who want to control part of the OID tree (called "private enterprise numbers") can get their own OID prefix directly from IANA as described in {{RFC9371}}.
+
+# IANA Considerations
+
+This document contains no actions for IANA.
+However, it discusses the use of IANA registries in many places.
+
+# Security Considerations
+
+This document is about the use of cryptography in IETF protocols, and how that cryptography is referenced in those protocols.
+
+Reusing cryptographic components that have already been reviewed and approved in the IETF is usually better than creating new cryptography that must be reviewed before it is used in protocols.
+
+--- back

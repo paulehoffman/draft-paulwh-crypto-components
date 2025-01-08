@@ -108,7 +108,7 @@ This necessitates a more conservative approach to code point allocation, and mig
 As stated above, Internet Drafts are a method for defining cryptographic components.
 This method is controversial with some members of the IETF community because drafts were originally designed to be impossible to access six months after publication, and wording based on the assumption of that inaccessibility still appears automatically in current Internet Drafts.
 However, using drafts as stable references for code points in IANA registries has been allowed for at least 20 years.
-When a draft If used as a reference for a code point, it needs to be a specific version of a draft; that is, the filename of the draft must end in a two-digit number.
+When a draft is used as a reference for a code point, it needs to be a specific version of a draft; that is, the filename of the draft must end in a two-digit number.
 
 ## Private-Use Code Points
 

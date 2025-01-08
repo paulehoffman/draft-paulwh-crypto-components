@@ -43,7 +43,7 @@ In this document, items such as cryptographic algorithms, base primitives, funct
 Doing so avoids the conflicting definitions of what differentiates, for example, a method from a construction.
 
 This document explicitly does not prohibit exceptions from the current practices.
-Give the wide variety of historical practices, the difficulty of differentiating what is a base primitive and what is a cryptographic component, and the variety of needs in IETF working groups, leeway is allowed for future specifications.
+Give the wide variety of historical practices, the difficulty of differentiating what is a base primitive and what is a cryptographic component, and the variety of needs in IETF working groups, the guidance in this document gives leeway for future specifications.
 
 # Referencing Cryptography in RFCs
 

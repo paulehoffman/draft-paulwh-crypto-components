@@ -141,6 +141,7 @@ A working group's decision about whether a particular cryptographic component is
 Deployed cryptographic components that known to be weak, such as those with keys that are now considered to be too small, present a significant challenge for working groups.
 For such a weak component, clearly the recommendation should be against deployment, but a similar recommend against allowing implementation can make deployed systems unusable.
 Such decisions are left to working groups, an are not covered here in any significant depth.
+Working groups might batch their decision-making into periodic at chosen intervals.
 
 Having too many algorithms with a "recommended" status can be harmful because it complicates implementations, deployments, and migrations to newer algorithms.
 

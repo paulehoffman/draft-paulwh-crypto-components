@@ -142,6 +142,7 @@ Deployed cryptographic components that known to be weak, such as those with keys
 For such a weak component, clearly the recommendation should be against deployment, but a similar recommend against allowing implementation can make deployed systems unusable.
 Such decisions are left to working groups, an are not covered here in any significant depth.
 Working groups might batch their decision-making into periodic at chosen intervals.
+Working groups who choose to go against IETF-wide trends for cryptographic component should clearly state why their choices differ.
 
 Having too many algorithms with a "recommended" status can be harmful because it complicates implementations, deployments, and migrations to newer algorithms.
 

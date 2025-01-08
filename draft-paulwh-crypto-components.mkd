@@ -75,7 +75,7 @@ This allows better review of the cryptography by cryptographers, and better revi
 There are many sources of references for cryptography other than RFCs.
 Such sources include: 
 
-- National standards development organizations (SDOs) such as the U.S. National Institute of Standards and Technology (NIST)
+- National standards development organizations (SDOs) such as the U.S. National Institute of Standards and Technology (NIST) and the German Federal Office for Information Security (BSI)
 - International SDOs such as the International Standards Organization (ISO) and the International Telecommunications Union (ITU)
 - Academic papers and articles
 - Internet Drafts that did not become RFCs

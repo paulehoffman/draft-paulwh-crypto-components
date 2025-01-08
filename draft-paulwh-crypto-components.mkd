@@ -134,7 +134,7 @@ Such recommendations make the component available to users, letting them choose 
 In the former case, the IETF is only speaking to developers; in the latter, the IETF is speaking directly to users who configure their use of the protocol.
 This difference between "implementation" and "deployment" has sometimes tripped up working groups, but it is quite important to people trying to understand the IANA registry contents.
 
-Decisions on setting the values in these columns require a standards track RFC.
+Decisions on setting the values in these columns to anything other than "MAY" require a standards track RFC.
 That is, Independent Stream and IRTF RFCs cannot set or change the values in such a table in an IANA registry.
 
 A working group's decision about whether a particular cryptographic component is mandatory, suggested, suggested against, or must not be used, may not an easy one to make, particularly in light of also having to also decide for both implementation and deployment.

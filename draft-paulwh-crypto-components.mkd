@@ -78,7 +78,7 @@ Such sources include:
 - National standards development organizations (SDOs) such as the U.S. National Institute of Standards and Technology (NIST) and the German Federal Office for Information Security (BSI)
 - International SDOs such as the International Standards Organization (ISO) and the International Telecommunications Union (ITU)
 - Academic papers and articles
-- Internet Drafts that did not become RFCs
+- Internet Drafts not meant to proceed to RFC status
 - Web sites of individual cryptographers
 
 The latter two of these are controversial in the IETF.

@@ -47,8 +47,8 @@ Give the wide variety of historical practices, the difficulty of differentiating
 
 # Referencing Cryptography in RFCs
 
-RFCs that define secure protocols need to reference cryptographic components, unless those RFC define the components themselves.
-It is uncommon for IETF protocols to define cryptographic components; instead, those components are define elsewhere and referenced in the protocol RFC.
+The RFCs that define secure protocols need to reference cryptographic components, unless those RFCs define the components themselves.
+It is uncommon for IETF protocols to define cryptographic components; instead, those components are defined elsewhere and referenced in the protocol RFC.
 
 There are many sources for cryptographic references for RFCs.
 
@@ -63,7 +63,7 @@ In order to be published as an RFC, an Internet Draft must be sponsored by one o
 - The Internet Architecture Board
 
 RFCs describing cryptographic components have been published by the first four of those.
-Note, however, that Area Directors may not be willing to individually sponsor drafts for cryptographic components because other venues for RFC publication can garner better reviews, and because RFCs are not required for specifying cryptographic components (see {{external}}).
+Note, however, that Area Directors may not be willing to individually sponsor drafts for cryptographic components because other venues for RFC publication can garner better reviews, and because RFCs are often not required for specifying cryptographic components (see {{external}}).
 
 Many RFCs are specifications of cryptographic components, some are specific use cases of cryptography where additional operational constrains apply, and still others simply list cryptographic identifiers such as OIDs or IANA registration values.
 

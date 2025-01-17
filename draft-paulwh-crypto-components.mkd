@@ -47,7 +47,7 @@ Give the wide variety of historical practices, the difficulty of differentiating
 
 # Referencing Cryptography in RFCs
 
-The RFCs that define secure protocols need to reference cryptographic components, unless those RFCs define the components themselves.
+RFCs that define secure protocols need to reference cryptographic components, unless those RFCs define the components themselves.
 It is uncommon for IETF protocols to define cryptographic components; instead, those components are defined elsewhere and referenced in the protocol RFC.
 
 There are many sources for cryptographic references for RFCs.

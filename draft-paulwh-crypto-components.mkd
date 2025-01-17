@@ -98,7 +98,7 @@ The following sections cover aspects of using IANA registries for cryptographic 
 
 ## Per-Registry Requirements for Adding Code Points
 
-In the past, some working groups had configured the ability to add cryptographic component code points to IANA registries for their protocols be very strict, by requiring an RFC.
+In the past, some working groups had set the ability to add cryptographic component code points to IANA registries for their protocols be very strict, by requiring an RFC.
 Recently, the rules for many registries have been updated to make it easier to get code points in order to allow for experimentation.
 Where possible, the rules for registries for cryptographic components should have an open registration policy (such as "Expert Review" or "Specification Required") so Internet Drafts can be used as specifications, not just RFCs.
 

@@ -47,7 +47,7 @@ Give the wide variety of historical practices, the difficulty of differentiating
 
 # Referencing Cryptography in RFCs
 
-RFCs that define secure protocols need to reference cryptographic components, unless those RFCs define the components themselves.
+RFCs that define secure protocols need to reference cryptographic components, or those RFCs define the components themselves.
 It is uncommon for IETF protocols to define cryptographic components; instead, those components are defined elsewhere and referenced in the protocol RFC.
 
 There are many sources for cryptographic references for RFCs.
@@ -65,7 +65,7 @@ In order to be published as an RFC, an Internet Draft must be sponsored by one o
 RFCs describing cryptographic components have been published by the first four of those.
 Note, however, that Area Directors may not be willing to individually sponsor drafts for cryptographic components because other venues for RFC publication can garner better reviews, and because RFCs are often not required for specifying cryptographic components (see {{external}}).
 
-Many RFCs are specifications of cryptographic components, some are specific use cases of cryptography where additional operational constrains apply, and still others simply list cryptographic identifiers such as OIDs or IANA registration values.
+Many RFCs are specifications of cryptographic components, some are specific use cases of cryptography where additional operational constraints apply, and still others simply list cryptographic identifiers such as OIDs or IANA registration values.
 
 Whenever possible, cryptographic components related to a specific protocol should be specified separately from the protocol itself.
 This allows better review of the cryptography by cryptographers, and better review of the protocol by protocol experts.
@@ -88,7 +88,7 @@ Individual web sites are probably the least-used references for cryptographic co
 
 # Using Identifiers for Cryptography in Protocols
 
-Although a proliferation of cryptographic components is unwanted, the IETF encourages experimenting with new cryptographic components.
+Although a proliferation of cryptographic components is a barrier to interoperability, the IETF encourages experimenting with new cryptographic components.
 Identifiers used in IETF protocols are meant to be easy to obtain, as the IETF encourages experimentation and operational testing.
 These identifiers are often called "code points" when they are listed in IANA registries, but might also be object identifiers (OIDs).
 OIDs are covered in {{oids}}.
@@ -100,10 +100,10 @@ The following sections cover aspects of using IANA registries for cryptographic 
 
 In the past, some working groups had set the ability to add cryptographic component code points to IANA registries for their protocols be very strict, by requiring an RFC.
 Recently, the rules for many registries have been updated to make it easier to get code points in order to allow for experimentation.
-Where possible, the rules for registries for cryptographic components should have an open registration policy (such as "Expert Review" or "Specification Required") so Internet Drafts can be used as specifications, not just RFCs.
+Where possible, the rules for cryptographic component registries should have an open registration policy (such as "Expert Review" or "Specification Required") so Internet Drafts can be used as specifications, not just RFCs.
 
 There are some IANA registries where the limited allocation space does not allow for handing out many experimental code points, such as those where the number of code points is limited to 256 or fewer.
-This necessitates a more conservative approach to code point allocation, and might instead force experiments to use private use code points instead of having allocations for code points that might only be thinly used.
+This necessitates a more conservative approach to code point allocation, and might instead force experiments to use private use code points instead of having allocations for code points that might only be used occasionally.
 
 As stated above, Internet Drafts are a method for defining cryptographic components.
 This method is controversial with some members of the IETF community because drafts were originally designed to be impossible to access six months after publication, and wording based on the assumption of that inaccessibility still appears automatically in current Internet Drafts.
@@ -137,12 +137,12 @@ This difference between "implementation" and "deployment" has sometimes tripped 
 Decisions on setting the values in these columns to anything other than "MAY" require a standards track RFC.
 That is, Independent Stream and IRTF RFCs cannot set or change the values in such a table in an IANA registry.
 
-A working group's decision about whether a particular cryptographic component is mandatory, suggested, suggested against, or must not be used, may not an easy one to make, particularly in light of also having to also decide for both implementation and deployment.
-Deployed cryptographic components that known to be weak, such as those with keys that are now considered to be too small, present a significant challenge for working groups.
+A working group's decision about whether a particular cryptographic component is mandatory, suggested, suggested against, or must not be used, might not be an easy one to make, particularly in light of also having to decide for both implementation and deployment.
+Deployed cryptographic components that are known to be weak, such as those with keys that are now considered to be too small, present a significant challenge for working groups.
 For such a weak component, clearly the recommendation should be against deployment, but a similar recommend against allowing implementation can make deployed systems unusable.
 Such decisions are left to working groups, an are not covered here in any significant depth.
 Working groups might batch their decision-making into periodic chosen intervals.
-Working groups who choose to go against IETF-wide trends for cryptographic component should clearly state why their choices differ.
+Working groups that choose to go against IETF-wide trends for cryptographic component should clearly state why their choices differ.
 
 Having too many algorithms with a "recommended" status is harmful because it complicates implementations, deployments, and migrations to newer algorithms.
 

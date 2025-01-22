@@ -1,5 +1,5 @@
 ---
-title: Referencing Cryptographic Components in IETF Documents
+title: Documenting and Referencing Cryptographic Components in IETF Documents
 abbrev: Crypto components
 docname: draft-paulwh-crypto-components-00
 ipr: trust200902
@@ -26,7 +26,7 @@ normative:
 
 --- abstract
 
-This document describes the history of how cryptographic components have been specified and referenced in the IETF, particularly in RFCs.
+This document describes the history of how cryptographic components have been documented and referenced in the IETF, particularly in RFCs.
 It also gives guidance for how such specification should happen in the future.
 
 --- middle
@@ -43,7 +43,7 @@ In this document, items such as cryptographic algorithms, base primitives, funct
 Doing so avoids the conflicting definitions of what differentiates, for example, a method from a construction.
 
 This document explicitly does not prohibit exceptions from the current practices.
-Given the wide variety of historical practices, the difficulty of differentiating what is a base primitive and what is a cryptographic component, and the variety of needs in IETF working groups, the guidance in this document gives leeway for future specifications.
+Give the wide variety of historical practices, the difficulty of differentiating what is a base primitive and what is a cryptographic component, and the variety of needs in IETF working groups, the guidance in this document gives leeway for future specifications.
 
 # Referencing Cryptography in RFCs
 

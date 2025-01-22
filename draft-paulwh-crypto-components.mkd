@@ -19,6 +19,7 @@ author:
     email: paul.hoffman@icann.org
 
 informative:
+  RFC8179:
   RFC9371:
 
 normative:
@@ -159,6 +160,11 @@ When designing new protocols, IANA registries with code points should be used in
 In IETF standards, many OIDs for cryptographic components normally are based on a part of the OID tree that was established in the early 1990s.
 However, many OIDs come from other parts of the OID tree, and no particular part of the OID tree is better or worse than any other for unique identification of cryptographic components.
 In fact, individuals who want to control part of the OID tree (called "private enterprise numbers") can get their own OID prefix directly from IANA as described in {{RFC9371}}.
+
+## Identifiers and Intellectual Property
+
+Assigning code points for proprietary cryptographic components or cryptographic components that have known intellectual property rights (IPR) is acceptable as long as any IETF protocol using those code points also allow the protocol to be run without using those components.
+The IETF policy on IPR can be found in {{RFC8179}}.
 
 # IANA Considerations
 

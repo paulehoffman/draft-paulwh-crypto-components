@@ -150,7 +150,7 @@ Having too many algorithms with a "recommended" status is harmful because it com
 
 Registries that do not have columns for "implementation" and/or "deployment" can be updated by working groups or the IETF to add those columns.
 
-# OIDs {#oids}
+## OIDs {#oids}
 
 Some IETF cryptographic protocols, notable S/MIME, use OIDs instead of IANA registries for code points.
 OIDs are a hierarchical numbering system, normally stored in ASN.1 DER or BER encoding, and displayed as a series of positive integers separated by period (".") characters.

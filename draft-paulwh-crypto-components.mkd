@@ -34,7 +34,7 @@ It also gives guidance for how such specification should happen in the future.
 # Introduction
 
 The IETF has many diverse ways to document and reference cryptographic components that are used in protocols. 
-These practices have changed over time, based on the IETF leadership and the types of components needed by protocols.
+These practices have changed over time, based on the IETF community, the IETF leadership, and the types of components needed by protocols.
 
 The purpose of this document is to increase consistency and transparency in how the IETF handles cryptographic components.
 This document does not define any new policies, but instead describes the many practices that have been used, particularly the practices that are considered best for use today.

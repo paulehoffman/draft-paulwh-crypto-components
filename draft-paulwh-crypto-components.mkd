@@ -63,10 +63,12 @@ Such sources include:
 - Internet Drafts not meant to proceed to RFC status
 - Web sites of individual cryptographers
 
+<!-- 
 The latter two of these are controversial in the IETF.
 The original intention for Internet Drafts were that they would always be short-lived and thus should not be considered good long-term references.
 However, due to various pressures on the RFC system, there are some drafts that never became RFCs but whose last published version still represents a stable description of a cryptographic component.
 Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
+-->
 
 ## RFCs for Specifying Cryptography
 

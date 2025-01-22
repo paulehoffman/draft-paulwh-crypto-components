@@ -1,7 +1,7 @@
 ---
 title: Documenting and Referencing Cryptographic Components in IETF Documents
 abbrev: Crypto components
-docname: draft-paulwh-crypto-components-00
+docname: draft-paulwh-crypto-components-01
 ipr: trust200902
 submissiontype: IETF
 cat: info

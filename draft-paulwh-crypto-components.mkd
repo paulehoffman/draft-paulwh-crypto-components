@@ -52,6 +52,22 @@ It is uncommon for IETF protocols to define cryptographic components; instead, t
 
 There are many sources for cryptographic references for RFCs.
 
+## External References for Specifying Cryptography {#external}
+
+There are many sources of references for cryptography other than RFCs.
+Such sources include: 
+
+- National standards development organizations (SDOs) such as the U.S. National Institute of Standards and Technology (NIST) and the German Federal Office for Information Security (BSI)
+- International SDOs such as the International Standards Organization (ISO) and the International Telecommunications Union (ITU)
+- Academic papers and articles
+- Internet Drafts not meant to proceed to RFC status
+- Web sites of individual cryptographers
+
+The latter two of these are controversial in the IETF.
+The original intention for Internet Drafts were that they would always be short-lived and thus should not be considered good long-term references.
+However, due to various pressures on the RFC system, there are some drafts that never became RFCs but whose last published version still represents a stable description of a cryptographic component.
+Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
+
 ## RFCs for Specifying Cryptography
 
 In order to be published as an RFC, an Internet Draft must be sponsored by one of the following:
@@ -69,22 +85,6 @@ Many RFCs are specifications of cryptographic components, some are specific use 
 
 Whenever possible, cryptographic components related to a specific protocol should be specified separately from the protocol itself.
 This allows better review of the cryptography by cryptographers, and better review of the protocol by protocol experts.
-
-## External References for Specifying Cryptography {#external}
-
-There are many sources of references for cryptography other than RFCs.
-Such sources include: 
-
-- National standards development organizations (SDOs) such as the U.S. National Institute of Standards and Technology (NIST) and the German Federal Office for Information Security (BSI)
-- International SDOs such as the International Standards Organization (ISO) and the International Telecommunications Union (ITU)
-- Academic papers and articles
-- Internet Drafts not meant to proceed to RFC status
-- Web sites of individual cryptographers
-
-The latter two of these are controversial in the IETF.
-The original intention for Internet Drafts were that they would always be short-lived and thus should not be considered good long-term references.
-However, due to various pressures on the RFC system, there are some drafts that never became RFCs but whose last published version still represents a stable description of a cryptographic component.
-Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
 
 # Using Identifiers for Cryptography in Protocols
 

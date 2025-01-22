@@ -32,6 +32,8 @@ It also gives guidance for how such specification should happen in the future.
 
 --- middle
 
+<!-- Suggestsion from Mastodon: Add something that suggests but does not demand that specs have test vectors -->
+
 # Introduction
 
 The IETF has many diverse ways to document and reference cryptographic components that are used in protocols. 

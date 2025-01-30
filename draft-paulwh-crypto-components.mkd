@@ -160,6 +160,7 @@ When designing new protocols, IANA registries with code points should be used in
 In IETF standards, many OIDs for cryptographic components normally are based on a part of the OID tree that was established in the early 1990s.
 However, many OIDs come from other parts of the OID tree, and no particular part of the OID tree is better or worse than any other for unique identification of cryptographic components.
 In fact, individuals who want to control part of the OID tree (called "private enterprise numbers") can get their own OID prefix directly from IANA as described in {{RFC9371}}.
+The ASN.1 prefix for the IANA PEN tree is 1.3.6.1.4.1.
 
 ## Identifiers and Intellectual Property
 

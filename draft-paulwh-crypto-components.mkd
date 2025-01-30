@@ -155,7 +155,6 @@ Registries that do not have columns for "implementation" and/or "deployment" can
 
 Some IETF cryptographic protocols (notably CMS, CMP, S/MIME, and PKIX) use OIDs instead of IANA registries for code points.
 OIDs are a hierarchical numbering system, normally stored in ASN.1 DER or BER encoding, and displayed as a series of positive integers separated by period (".") characters.
-When designing new protocols, IANA registries with code points should be used instead of OIDs.
 
 In IETF standards, many OIDs for cryptographic components normally are based on a part of the OID tree that was established in the early 1990s.
 However, many OIDs come from other parts of the OID tree, and no particular part of the OID tree is better or worse than any other for unique identification of cryptographic components.

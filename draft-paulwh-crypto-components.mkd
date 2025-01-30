@@ -64,13 +64,6 @@ Such sources include:
 - Internet Drafts not meant to proceed to RFC status
 - Web sites of individual cryptographers
 
-<!-- 
-The latter two of these are controversial in the IETF.
-The original intention for Internet Drafts were that they would always be short-lived and thus should not be considered good long-term references.
-However, due to various pressures on the RFC system, there are some drafts that never became RFCs but whose last published version still represents a stable description of a cryptographic component.
-Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
--->
-
 ## RFCs for Specifying Cryptography
 
 In order to be published as an RFC, an Internet Draft must be sponsored by one of the following:
@@ -103,15 +96,17 @@ The following sections cover aspects of using IANA registries for cryptographic 
 
 In the past, some working groups had set the ability to add cryptographic component code points to IANA registries for their protocols be very strict, by requiring an RFC.
 Recently, the rules for many registries have been updated to make it easier to get code points in order to allow for experimentation.
-Where possible, the rules for cryptographic component registries should have an open registration policy (such as "Expert Review" or "Specification Required") so Internet Drafts can be used as specifications, not just RFCs.
+Where possible, the rules for cryptographic component registries should have an open registration policy (such as "Expert Review" or "Specification Required").
+These do not need to be RFCs, but should be stable references.
+
+Stable specifications are important references for developers who rely on a registry with code points.
+Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
+
+Although there is no IETF-wide consensus at the time of this writing as to whether specific versions of an Internet Drafts are appropriate for all registries as stable references, they have been used in the past for cryptographic purposes.
+Until further guidance is developed, the decision about whether a draft is acceptable can continue to be addressed on a case-by-case basis by the designated expert for the specific registry.
 
 There are some IANA registries where the limited allocation space does not allow for handing out many experimental code points, such as those where the number of code points is limited to 256 or fewer.
 This necessitates a more conservative approach to code point allocation, and might instead force experiments to use private use code points instead of having allocations for code points that might only be used occasionally.
-
-As stated above, Internet Drafts are a method for defining cryptographic components.
-This method is controversial with some members of the IETF community because drafts were originally designed to be impossible to access six months after publication, and wording based on the assumption of that inaccessibility still appears automatically in current Internet Drafts.
-However, using Internet Drafts as stable references for code points in IANA registries has been allowed for at least 20 years.
-When a draft is used as a reference for a code point, a specific version of a draft is specified; that is, the filename of the draft must end in a two-digit number.
 
 ## Private-Use Code Points
 
@@ -155,7 +150,6 @@ Registries that do not have columns for "implementation" and/or "deployment" can
 
 Some IETF cryptographic protocols (notably CMS, CMP, S/MIME, and PKIX) use OIDs instead of IANA registries for code points.
 OIDs are a hierarchical numbering system, normally stored in ASN.1 DER or BER encoding, and displayed as a series of positive integers separated by period (".") characters.
-When designing new protocols, IANA registries with code points should be used instead of OIDs.
 
 In IETF standards, many OIDs for cryptographic components normally are based on a part of the OID tree that was established in the early 1990s.
 However, many OIDs come from other parts of the OID tree, and no particular part of the OID tree is better or worse than any other for unique identification of cryptographic components.

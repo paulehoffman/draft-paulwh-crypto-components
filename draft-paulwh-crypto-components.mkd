@@ -76,7 +76,7 @@ In order to be published as an RFC, an Internet Draft must be sponsored by one o
 
 RFCs describing cryptographic components have been published by the first four of those.
 Note, however, that Area Directors may not be willing to individually sponsor drafts for cryptographic components because other venues for RFC publication can garner better reviews, and because RFCs are often not required for specifying cryptographic components (see {{external}}).
-Also note that documents from working groups and those sponsored by Area Directors must get IETF consensus (as determined by the IESG) before publication as RFCs.
+Documents from working groups and those sponsored by Area Directors must get IETF consensus (as determined by the IESG) before publication as RFCs.
 
 Many RFCs are specifications of cryptographic components, some are specific use cases of cryptography where additional operational constraints apply, and still others simply list cryptographic identifiers such as OIDs or IANA registration values.
 

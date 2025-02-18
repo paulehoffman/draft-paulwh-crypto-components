@@ -122,7 +122,7 @@ Generally, the RFC describing the protocol will define how the private-use code 
 
 ## Vendor Space Code Points
 
-Some IANA registries use a an allocation scheme that allows for unlimited code points based on "vendor strings".
+Some IANA registries use an allocation scheme that allows for unlimited code points based on "vendor strings".
 This allows for wide experimentation in a "vendor space" that acts as a private-use registration.
 Such registrations might later be converted to an allocation not based on vendor names if the cryptographic component achieves IETF-wide consensus.
 

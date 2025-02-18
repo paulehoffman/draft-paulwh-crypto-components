@@ -45,7 +45,7 @@ This document does not define any new policies, but instead describes the many p
 In this document, items such as cryptographic algorithms, base primitives, functions, methods, and constructions are all lumped under the term "cryptographic components".
 Doing so avoids the conflicting definitions of what differentiates, for example, a method from a construction.
 
-This document explicitly does not prohibit exceptions from the current practices.
+This document is informative, and thus does not prohibit exceptions from the current practices.
 Given the wide variety of historical practices, the difficulty of differentiating what is a base primitive and what is a cryptographic component, and the variety of needs in IETF working groups, the guidance in this document gives leeway for future specifications.
 
 # Referencing Cryptography in RFCs

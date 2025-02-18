@@ -103,8 +103,7 @@ The following sections cover aspects of using IANA registries for cryptographic 
 
 In the past, some working groups allowed only a narrow ability to add cryptographic component code points to IANA registries for their protocols, by requiring an RFC.
 Recently, the rules for many registries have been updated to make it easier to get code points in order to allow for experimentation.
-Where possible, the rules for cryptographic component registries should have an open registration policy (such as "Expert Review" or "Specification Required").
-These do not need to be RFCs, but should be stable references.
+While the specific registration conditions for "Expert Review" and "Specification Required" are a matter for the WG to specify when creating or updating a registry, overall IETF policies do not require that these specifications be RFCs; they should, however, be stable references.
 
 Stable specifications are important references for developers who rely on a registry with code points.
 Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.

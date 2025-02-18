@@ -102,7 +102,8 @@ The following sections cover aspects of using IANA registries for cryptographic 
 ## Per-Registry Requirements for Adding Code Points
 
 In the past, some working groups allowed only a narrow ability to add cryptographic component code points to IANA registries for their protocols, by requiring an RFC.
-Recently, the rules for many registries have been updated to make it easier to get code points in order to allow for experimentation.
+Recently, the rules for many registries have been updated to make it easier to get code points.
+Registry rules with looser requirement may reduce the likelihood that vendors will just take unallocated codepoints (also known as "squatting") because they can create a stable document for their uses; this also leads to more well-documented experimentation.
 While the specific registration conditions for "Expert Review" and "Specification Required" are a matter for the WG to specify when creating or updating a registry, overall IETF policies do not require that these specifications be RFCs; they should, however, be stable references.
 
 Stable specifications are important references for developers who rely on a registry with code points.

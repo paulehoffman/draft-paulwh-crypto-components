@@ -165,6 +165,10 @@ However, many OIDs come from other parts of the OID tree, and no particular part
 In fact, individuals who want to control part of the OID tree (called "private enterprise numbers") can get their own OID prefix directly from IANA as described in {{RFC9371}}.
 The ASN.1 prefix for the IANA PEN tree is 1.3.6.1.4.1.
 
+There is no definitive central source for OID assignments like the IANA registries.
+Further, assigning OIDs for cryptographic components in RFCs does not have the flexibility and semantic richness available in IANA registries.
+Because of this, OIDs are rarely used for cryptographic identifiers in new protocols unless those new protocols are closely aligned with protocols that already use OIDs.
+
 ## Identifiers and Intellectual Property
 
 Assigning code points for proprietary cryptographic components or cryptographic components that have known intellectual property rights (IPR) is acceptable as long as any IETF protocol using those code points also allow the protocol to be run without using those components.

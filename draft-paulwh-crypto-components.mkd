@@ -104,7 +104,7 @@ These do not need to be RFCs, but should be stable references.
 Stable specifications are important references for developers who rely on a registry with code points.
 Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
 
-Although there is no IETF-wide consensus at the time of this writing as to whether specific versions of an Internet Drafts are appropriate for all registries as stable references, they have been used in the past.
+Although there is no IETF-wide consensus at the time of this writing as to whether an Internet Drafts are appropriate for all registries as stable references, they have been used in the past.
 The RFC that defines the registry defines whether a draft is acceptable in the registry.
 Most RFCs do not define whether drafts are acceptable a stable reference, but some do give guidance to designated experts on this topic.
 

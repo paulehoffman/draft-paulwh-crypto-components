@@ -104,9 +104,9 @@ These do not need to be RFCs, but should be stable references.
 Stable specifications are important references for developers who rely on a registry with code points.
 Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
 
-Although there is no IETF-wide consensus at the time of this writing as to whether specific versions of an Internet Drafts are appropriate for all registries as stable references, they have been used in the past for cryptographic purposes.
+Although there is no IETF-wide consensus at the time of this writing as to whether specific versions of an Internet Drafts are appropriate for all registries as stable references, they have been used in the past.
 The RFC that defines the registry defines whether a draft is acceptable in the registry.
-Working groups creating or modifying registries should consider specifying this so that the designated experts know how to act when presented with proposals for new entries.
+Most RFCs do not define whether drafts are acceptable a stable reference, but some do give guidance to designated experts on this topic.
 
 There are some IANA registries where the limited allocation space does not allow for handing out many experimental code points, such as those where the number of code points is limited to 256 or fewer.
 This necessitates a more conservative approach to code point allocation, and might instead force experiments to use private use code points instead of having allocations for code points that might only be used occasionally.

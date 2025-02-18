@@ -45,7 +45,7 @@ This document does not define any new policies, but instead describes the many p
 In this document, items such as cryptographic algorithms, base primitives, functions, methods, and constructions are all lumped under the term "cryptographic components".
 Doing so avoids the conflicting definitions of what differentiates, for example, a method from a construction.
 
-This document explicitly does not prohibit exceptions from the current practices.
+This document is informative, and thus does not prohibit exceptions from the current practices.
 Given the wide variety of historical practices, the difficulty of differentiating what is a base primitive and what is a cryptographic component, and the variety of needs in IETF working groups, the guidance in this document gives leeway for future specifications.
 
 # Referencing Cryptography in RFCs
@@ -101,10 +101,10 @@ The following sections cover aspects of using IANA registries for cryptographic 
 
 ## Per-Registry Requirements for Adding Code Points
 
-In the past, some working groups had set the ability to add cryptographic component code points to IANA registries for their protocols be very strict, by requiring an RFC.
-Recently, the rules for many registries have been updated to make it easier to get code points in order to allow for experimentation.
-Where possible, the rules for cryptographic component registries should have an open registration policy (such as "Expert Review" or "Specification Required").
-These do not need to be RFCs, but should be stable references.
+In the past, some working groups allowed only a narrow ability to add cryptographic component code points to IANA registries for their protocols, by requiring an RFC.
+Recently, the rules for many registries have been updated to make it easier to get code points.
+Registry rules with looser requirement may reduce the likelihood that vendors will just take unallocated codepoints (also known as "squatting") because they can create a stable document for their uses; this also leads to more well-documented experimentation.
+While the specific registration conditions for "Expert Review" and "Specification Required" are a matter for the WG to specify when creating or updating a registry, overall IETF policies do not require that these specifications be RFCs; they should, however, be stable references.
 
 Stable specifications are important references for developers who rely on a registry with code points.
 Individual web sites are probably the least-used references for cryptographic components for good reasons: the URLs for them might change or disappear, the content of the web sites might change in ways that would affect the components' definition, and so on.
@@ -123,7 +123,7 @@ Generally, the RFC describing the protocol will define how the private-use code 
 
 ## Vendor Space Code Points
 
-Some IANA registries use a an allocation scheme that allows for unlimited code points based on "vendor strings".
+Some IANA registries use an allocation scheme that allows for unlimited code points based on "vendor strings".
 This allows for wide experimentation in a "vendor space" that acts as a private-use registration.
 Such registrations might later be converted to an allocation not based on vendor names if the cryptographic component achieves IETF-wide consensus.
 
@@ -158,7 +158,7 @@ Registries that do not have columns for "implementation" and/or "deployment" can
 
 ## OIDs {#oids}
 
-Some IETF cryptographic protocols (notably CMS, CMP, S/MIME, and PKIX) use OIDs instead of IANA registries for code points.
+Some IETF cryptographic protocols (notably CMS, CMP, S/MIME, and PKIX) use OIDs as code points instead of values in IANA registries.
 OIDs are a hierarchical numbering system, normally stored in ASN.1 DER or BER encoding, and displayed as a series of positive integers separated by period (".") characters.
 
 In IETF standards, many OIDs for cryptographic components normally are based on a part of the OID tree that was established in the early 1990s.

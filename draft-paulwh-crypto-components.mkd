@@ -152,7 +152,7 @@ Such decisions are left to working groups, an are not covered here in any signif
 Working groups might batch their decision-making into periodic chosen intervals.
 Working groups that choose to go against IETF-wide trends for cryptographic component should clearly state why their choices differ.
 
-Having too many algorithms with a "recommended" status is harmful because it complicates implementations, deployments, and migrations to newer algorithms.
+Having too many algorithms with a "recommended" status complicates implementations and deployments, and can delay migrations to newer algorithms.
 
 Registries that do not have columns for "implementation" and/or "deployment" can be updated by working groups or the IETF to add those columns.
 

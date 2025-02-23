@@ -171,6 +171,7 @@ Registries that do not have columns for "implementation" and/or "deployment" can
 ## OIDs {#oids}
 
 Some IETF cryptographic protocols (notably CMS, CMP, S/MIME, and PKIX) use OIDs as code points instead of values in IANA registries.
+A few IANA registries list OIDs, but currently most OIDs are only listed in RFCs.
 OIDs are a hierarchical numbering system, normally stored in ASN.1 DER or BER encoding, and displayed as a series of positive integers separated by period (".") characters.
 
 In IETF standards, many OIDs for cryptographic components normally are based on a part of the OID tree that was established in the early 1990s.
@@ -179,7 +180,9 @@ In fact, individuals who want to control part of the OID tree (called "private e
 The ASN.1 prefix for the IANA PEN tree is 1.3.6.1.4.1.
 
 There is no definitive central source for OID assignments like the IANA registries.
-Further, assigning OIDs for cryptographic components in RFCs does not have the flexibility and semantic richness available in IANA registries.
+This means that OIDs that are assigned in RFCs are only visible to readers of those RFCs, which can cause authors of Internet Drafts to accidentally assign OIDs that are already assigned elsewhere.
+
+Assigning OIDs for cryptographic components in RFCs does not have the flexibility and semantic richness available in IANA registries.
 Because of this, OIDs are rarely used for cryptographic identifiers in new protocols unless those new protocols are closely aligned with protocols that already use OIDs.
 
 ## Identifiers and Intellectual Property

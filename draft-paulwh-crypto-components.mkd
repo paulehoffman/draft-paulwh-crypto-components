@@ -28,7 +28,8 @@ normative:
 
 --- abstract
 
-This document describes the history of how cryptographic components have been documented and referenced in the IETF, particularly in RFCs.
+This document describes the history of how cryptographic components have been documented and referenced in the IETF,
+such as in RFCs, Internet Drafts, and exernal sources.
 It also gives guidance for how such specification should happen in the future.
 
 %%
@@ -88,6 +89,8 @@ Documents from working groups and those sponsored by Area Directors must get IET
 
 Many RFCs are specifications of cryptographic components, some are specific use cases of cryptography where additional operational constraints apply, and still others simply list cryptographic identifiers such as OIDs or IANA registration values.
 
+An IETF protocol that uses cryptographic components does not need to refer to RFCs for those components;
+it can refer to external references as described in {{external}}.
 Whenever possible, cryptographic components related to a specific protocol should be specified separately from the protocol itself.
 This allows better review of the cryptography by cryptographers, and better review of the protocol by protocol experts.
 

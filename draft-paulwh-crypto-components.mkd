@@ -22,6 +22,7 @@ informative:
   RFC8179:
   RFC8789:
   RFC9371:
+  I-D.ietf-dnsop-rfc8624-bis:
 
 normative:
   RFC8126:
@@ -138,40 +139,25 @@ Such registrations might later be converted to an allocation not based on vendor
 
 ## Recommendations in IANA Registries
 
-%%
-This section needs major work.
-It needs to incorporate different models for recommendations in registries, such the differences between TLS and DNSSEC algorithm registries.
-It might have suggestions for models.
-%%
-
-<!--
 Each IETF working group and IRTF research group gets to specify the rules for the registries for the cryptographic components they create.
 
-Some IANA registries for specific cryptographic protocols have a column with a name such as "status" or "recommended" that indicates whether the the IETF recommends that a cryptographic component be used in that protocol.
-The definition of the column should differentiate between recommending for implementation and recommending for deployment.
+A few IANA registries for specific cryptographic protocols have a column with a name such as "status" or "recommended" that indicates whether the the IETF recommends that a cryptographic component be used in that protocol.
+Some examples of such registries at the time this document is published are: 
 
-- Recommendations for implementation tell developers of the protocol whether they should or must include the cryptographic component in their software or hardware implementations.
-Such recommendations make the component available to users, letting them choose whether or not to use the component in their deployments.
-- Recommendations for deployment tell the users of the protocol whether they should or must use the component in their deployments.
+- [TLS Cipher Suites](https://www.iana.org/assignments/tls-parameters/)
+There is a "Recommended" column, which is defined in the registry as:
+"If an item is not marked as "Recommended", it does not
+necessarily mean that it is flawed; rather, it indicates that
+the item either has not been through the IETF consensus process,
+has limited applicability, or is intended only for specific use
+cases."
+- [DNS Security Algorithm Numbers](https://www.iana.org/assignments/dns-sec-alg-numbers/)
+This registry is being updated by {{I-D.ietf-dnsop-rfc8624-bis}} to indicate whether the algorithm specified in the registry is recommended for signing and/or validation.
 
-In the former case, the IETF is only speaking to developers; in the latter, the IETF is speaking directly to users who configure their use of the protocol.
-This difference between "implementation" and "deployment" has sometimes tripped up working groups, but it is quite important to people trying to understand the IANA registry contents.
+\*\* Are there other current registries with cryptographic components that have recommended statuses? \*\*
 
-Working groups setting up such registries should strongly consider mandating that
-decisions on setting the values in these columns to anything other than "MAY" require a standards track RFC.
-That is, Independent Stream and IRTF RFCs would not be able to set or change the values in such a table in an IANA registry.
+The idea of keeping recommendations in IANA registries is relatively new, and working groups are experimenting with what types of recommendations will be valuable for implementers and users who are configuring their software to match the recommendations.
 
-A working group's decision about whether a particular cryptographic component is mandatory, suggested, suggested against, or must not be used, might not be an easy one to make, particularly in light of also having to decide for both implementation and deployment.
-Deployed cryptographic components that are known to be weak, such as those with keys that are now considered to be too small, present a significant challenge for working groups.
-For such a weak component, clearly the recommendation should be against deployment, but a similar recommend against allowing implementation can make deployed systems unusable.
-Such decisions are left to working groups, an are not covered here in any significant depth.
-Working groups might batch their decision-making into periodic chosen intervals.
-Working groups that choose to go against IETF-wide trends for cryptographic component should clearly state why their choices differ.
-
-Having too many algorithms with a "recommended" status complicates implementations and deployments, and can delay migrations to newer algorithms.
-
-Registries that do not have columns for "implementation" and/or "deployment" can be updated by working groups or the IETF to add those columns.
--->
 
 ## OIDs {#oids}
 

@@ -81,7 +81,7 @@ In order to be published as an RFC, an Internet Draft must be sponsored by one o
 - A research group in the Internet Research Task Force (IRTF)
 - An Area Director who is individually sponsoring the draft
 - The Independent Submissions Editor (ISE)
-- The Internet Architecture Board
+- The Internet Architecture Board (IAB)
 
 RFCs describing cryptographic components have been published by the first four of those.
 Note, however, that Area Directors may not be willing to individually sponsor drafts for cryptographic components because other venues for RFC publication can garner better reviews, and because RFCs are often not required for specifying cryptographic components (see {{external}}).
@@ -93,6 +93,43 @@ An IETF protocol that uses cryptographic components does not need to refer to RF
 it can refer to external references as described in {{external}}.
 Whenever possible, cryptographic components related to a specific protocol should be specified separately from the protocol itself.
 This allows better review of the cryptography by cryptographers, and better review of the protocol by protocol experts.
+
+## Pitfalls in Requiring RFCs for Cryptographic Components
+
+Some vendors and organizations that specify protocol compliance or interoperability demand that the cryptography used in their requirements be in RFCs.
+Such demands are fine for cryptographic components that are already widely agreed upon in IETF working groups, but those demands may not be met due to the difficulty of getting published RFCs for less popular components.
+That is, one cannot assume that a cryptographic component can automatically be embodied in an RFC, even if there are no known flaws in the component.
+
+Each of the methods for getting an RFC for cryptographic components has possible failure cases.
+
+IETF working groups:
+: Each working group gets to choose which drafts to adopt, based on the working group's charter.
+A working group might not adopt a particular draft for a cryptographic component if the working group is already too busy with other work,
+or if it finds the new component not different enough from components that have already been specified,
+or if it wants the industry to focus on the components that have already been specified.
+
+Research groups IRTF:
+: The primary IRTF research group that publishes cryptographic RFCs is the Crypto Forum Research Group (CFRG).
+The CFRG may decide not to publish RFCs for particular cryptographic components if those components are not that different from others that the group have already published,
+or if the group decides that the new work might have some undesirable cryptographic properties,
+or just because it is so busy with other mor interesting research.
+
+Area Director who individually sponsor drafts:
+: Area Directors are usually quite busy running their areas and reviewing every draft that comes before the Internet Engineering Steering Group (IESG).
+They sometimes make special cases for sponsoring drafts, but the amount of work to do so can often be a burden, so they tend not to do so.
+
+The ISE:
+: The ISE gets to choose which drafts they spend time on getting published as RFCs.
+Each draft that the ISE publishes goes through a lengthy review process before publication, so the ISE tends to be conservative in what they accept to publish.
+The ISE publishes on a wide variety of topics, but is often choosy about which drafts within a particular topic (such as cryptography) they publish.
+
+The IAB:
+: The IAB publishes drafts that originate with the IAB, and thus does not publish drafts of cryptographic components that were proposed to them.
+
+From the above, it is clear that it is risky to assume that any particular cryptographic component that was not already adopted by a working group or research group will be published as an RFC.
+Fortunately, RFC publication is rarely an absolute requirement.
+The following section describes how cryptographic components with stable external references can still be specified in ways that protocols can use them: by having them listed in IETF-approved registries maintained by IANA.
+
 
 # Using Identifiers for Cryptography in Protocols
 
